@@ -67,7 +67,7 @@ cp .env.example .env
 
 php artisan key:generate
 
-
+#Database Setup
 DB_DATABASE=laravel_news_admin
 DB_USERNAME=root
 DB_PASSWORD=
