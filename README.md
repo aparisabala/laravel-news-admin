@@ -46,8 +46,8 @@ This project can serve as a **starter admin panel** for a news portal or bloggin
 
 - **Framework**: Laravel 10+
 - **Database**: MySQL / MariaDB
-- **Frontend**: Blade, Bootstrap 5
-- **Authentication**: Laravel Breeze / Jetstream
+- **Frontend**: Blade, Bootstrap 5, Jquery Ajax
+- **Authentication**: Custom Auth
 - **Image Handling**: Laravel Filesystem & Intervention/Image
 - **Optional**: REST API with Laravel Sanctum / Passport
 
@@ -74,6 +74,6 @@ DB_PASSWORD=
 
 ```
 
-# php artisan serve
+### php artisan serve
 
-# http://127.0.0.1:8000
+### http://127.0.0.1:8000
