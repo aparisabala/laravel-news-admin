@@ -55,7 +55,7 @@ This project can serve as a **starter admin panel** for a news portal or bloggin
 
 ## ⚙️ Installation
 
-### 1. Clone the repository
+### 1. How to install
 ```bash
 git clone https://github.com/your-username/laravel-news-admin.git
 cd laravel-news-admin
