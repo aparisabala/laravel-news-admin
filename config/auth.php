@@ -40,6 +40,11 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        //vpx_guards
+        'admin' => [
+    'driver' => 'session',
+    'provider' => 'admin',
+],
     ],
 
     /*
@@ -64,11 +69,11 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        //vpx_guard_providers
+        'admin' => [
+    'driver' => 'eloquent',
+    'model' => App\Models\AdminUser::class,
+],
     ],
 
     /*
@@ -97,6 +102,13 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
+        //vpx_guard_passwords
+        'admin' => [
+    'provider' => 'admin',
+    'table' => 'password_reset_tokens',
+    'expire' => 60,
+    'throttle' => 60,
+],
     ],
 
     /*

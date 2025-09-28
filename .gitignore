@@ -17,3 +17,12 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+storage/app/public/uploads
+public/js/config/config.js
+composer.lock
+yarn.lock
+package-lock.json
+/storage/pail
+/vendor
+/.nova
+/.zed

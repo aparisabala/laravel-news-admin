@@ -62,7 +62,7 @@ return [
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
-
+        //vpx_db_client
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),

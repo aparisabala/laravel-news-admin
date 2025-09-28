@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Services\PxCommandService;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Http\Request;
@@ -24,17 +25,18 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        //get the service class for commands
         RateLimiter::for('api', function (Request $request) {
             return Limit::perMinute(60)->by($request->user()?->id ?: $request->ip());
         });
-
         $this->routes(function () {
+            $pxCommandService = app(PxCommandService::class);
             Route::middleware('api')
                 ->prefix('api')
                 ->group(base_path('routes/api.php'));
-
-            Route::middleware('web')
-                ->group(base_path('routes/web.php'));
+            Route::middleware('web')->group(base_path('routes/web.php'));
+            //vpx_append_routes
+            $pxCommandService->appendRoutes("routes/admin");
         });
     }
 }
